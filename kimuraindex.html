@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医療痩身スルリム - たった15分で理想の自分へ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .font-sans {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        /* 打消し線のカスタマイズ */
+        .failed-line {
+            position: relative;
+            display: inline-block;
+        }
+        .failed-line::after {
+            content: '';
+            position: absolute;
+            left: -5%;
+            top: 55%;
+            width: 110%;
+            height: 2px;
+            background-color: #ef4444;
+            transform: translateY(-50%) rotate(-2deg);
+            opacity: 0.6;
+        }
+        /* 価格のグラデーションアニメーション */
+        .price-gradient {
+            background: linear-gradient(to bottom, #fff 30%, #5EA2D7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 leading-relaxed tracking-wide">
+
+    <!-- 1. Hero Section (1画面に収まるよう調整) -->
+    <section class="relative h-[92vh] md:h-screen flex flex-col justify-center items-center pt-2 pb-4 px-6 text-center bg-[#f8fbff] overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 flex flex-col items-center w-full">
+            
+            <!-- 見出し：句読点「、」を削除 -->
+            <h1 class="text-xl md:text-5xl font-bold leading-[1.3] mb-4 text-slate-900 font-sans">
+                たった「15分」の施術で<br />
+                <span class="text-[#5EA2D7]">距離ができた旦那を振り向かせた</span>
+            </h1>
+
+            <!-- 写真セクション -->
+            <div class="relative w-full max-w-[300px] md:max-w-md mx-auto mb-4 text-center">
+                <div class="relative aspect-[4/3] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden shadow-xl border-[6px] md:border-[12px] border-white mb-3">
+                    <img 
+                        src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=800" 
+                        alt="夜にスマホを見る女性"
+                        class="object-cover w-full h-full grayscale-[10%]"
+                    />
+                </div>
+                <p class="text-slate-950 text-lg md:text-3xl font-sans tracking-[0.1em] font-black leading-tight">
+                    「痩せる」が口癖のあなたへ
+                </p>
+            </div>
+            
+            <div class="mt-2 animate-bounce opacity-20">
+                <i data-lucide="chevron-down" class="w-5 h-5 mx-auto"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Intro Story -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-2xl mx-auto px-6 relative">
+            <div class="absolute -left-20 top-20 text-[120px] font-sans font-black text-slate-50 select-none -z-0 uppercase tracking-tighter text-center">Story</div>
+            
+            <header class="text-center mb-16 relative z-10">
+                <h2 class="text-2xl md:text-3xl font-black mb-6 text-slate-900 leading-relaxed font-sans text-center">
+                    ダイエット歴１０年、痩せない理由
+                </h2>
+                <div class="flex justify-center gap-1.5">
+                    <div class="w-2 h-2 rounded-full bg-blue-200"></div>
+                    <div class="w-2 h-2 rounded-full bg-blue-200"></div>
+                    <div class="w-2 h-2 rounded-full bg-blue-200"></div>
+                </div>
+            </header>
+
+            <div class="space-y-12 text-lg text-slate-700 leading-[2.2] text-justify relative z-10 font-sans">
+                <div class="flex items-start gap-4 p-8 bg-blue-50/30 rounded-3xl border-2 border-blue-100 shadow-sm">
+                    <i data-lucide="user" class="w-7 h-7 text-blue-400 shrink-0 mt-2"></i>
+                    <p class="font-black text-slate-950 italic text-xl leading-relaxed text-left">
+                        「これ以上何をしたらいいのかわからない」
+                    </p>
+                </div>
+                
+                <div class="py-8 bg-slate-50/80 rounded-[2.5rem] px-6 md:px-10 border border-slate-200 shadow-inner">
+                    <div class="text-center mb-8">
+                        <p class="text-xs font-black text-slate-400 tracking-[0.3em] uppercase mb-2">Failure History</p>
+                        <h3 class="text-xl font-black text-slate-900 flex items-center justify-center gap-3">
+                            私がこれまで試して、ダメだったもの
+                        </h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white border-2 border-slate-200 p-5 rounded-2xl relative shadow-sm group text-center">
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mb-3 text-slate-300">
+                                    <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
+                                </div>
+                                <p class="text-base font-black failed-line text-slate-900 tracking-tighter">糖質制限</p>
+                            </div>
+                            <div class="absolute -top-1 -right-1">
+                                <i data-lucide="x-circle" class="w-10 h-10 text-red-500 fill-white"></i>
+                            </div>
+                        </div>
+                        <div class="bg-white border-2 border-slate-200 p-5 rounded-2xl relative shadow-sm text-center">
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mb-3 text-slate-300">
+                                    <i data-lucide="timer" class="w-6 h-6"></i>
+                                </div>
+                                <p class="text-base font-black failed-line text-slate-900 tracking-tighter">16時間断食</p>
+                            </div>
+                            <div class="absolute -top-1 -right-1">
+                                <i data-lucide="x-circle" class="w-10 h-10 text-red-500 fill-white"></i>
+                            </div>
+                        </div>
+                        <div class="bg-white border-2 border-slate-200 p-5 rounded-2xl relative shadow-sm text-center text-center">
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mb-3 text-slate-300">
+                                    <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                                </div>
+                                <p class="text-base font-black failed-line text-slate-900 tracking-tighter text-center">月額制のジム</p>
+                            </div>
+                            <div class="absolute -top-1 -right-1 text-center">
+                                <i data-lucide="x-circle" class="w-10 h-10 text-red-500 fill-white"></i>
+                            </div>
+                        </div>
+                        <div class="bg-white border-2 border-slate-200 p-5 rounded-2xl relative shadow-sm text-center">
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mb-3 text-slate-300">
+                                    <i data-lucide="smartphone" class="w-6 h-6"></i>
+                                </div>
+                                <p class="text-base font-black failed-line text-slate-900 tracking-tighter text-center">バズった宅トレ</p>
+                            </div>
+                            <div class="absolute -top-1 -right-1 text-center">
+                                <i data-lucide="x-circle" class="w-10 h-10 text-red-500 fill-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm font-bold text-slate-400 mt-8 italic text-center">※どれだけ頑張っても報われない日々でした...</p>
+                </div>
+
+                <div class="space-y-6 pt-6">
+                    <p class="font-black border-l-4 border-red-500 pl-6 text-red-700 leading-relaxed text-xl bg-red-50/30 py-6 rounded-r-lg text-left">
+                        世の中にある「痩せる」と言われる方法は、だいたいしました。
+                    </p>
+                    
+                    <div class="relative p-10 bg-slate-900 text-white rounded-3xl italic shadow-2xl border-4 border-slate-800 text-left">
+                        <div class="absolute -top-4 -right-4 bg-[#5EA2D7] text-white p-3 rounded-full shadow-lg text-center"><i data-lucide="alert-circle" class="w-6 h-6"></i></div>
+                        <p class="text-xl font-bold leading-[2.4] text-left">
+                            だけど体重は少し減っても、<br class="hidden md:block">
+                            <span class="text-red-400 font-black text-2xl underline decoration-red-400/50 underline-offset-8 mx-1 text-left">「顎の下の肉」</span>
+                            <span class="text-red-400 font-black text-2xl underline decoration-red-400/50 underline-offset-8 mx-1 text-left">「二の腕の付け根」</span>
+                            だけは、落ちない。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="py-16 text-slate-950 text-xl font-sans tracking-[0.05em] text-center space-y-8 relative">
+                    <div class="flex items-center justify-center gap-6">
+                        <span class="h-[1px] w-12 bg-slate-300"></span>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-[0.3em]">Inner Voice</span>
+                        <span class="h-[1px] w-12 bg-slate-300"></span>
+                    </div>
+                    <div class="space-y-5 font-black italic leading-relaxed text-center">
+                        <p class="drop-shadow-sm">「私の努力が足りないの？」</p>
+                        <p class="drop-shadow-sm text-2xl">「体質のせい？ それとも、もう一生このまま？」</p>
+                    </div>
+                </div>
+
+                <p class="font-medium text-slate-800 text-left">
+                    と一週間前まではそう思っていました。<br />
+                    <span class="bg-yellow-100 px-1 font-black text-slate-950 border-b-4 border-yellow-300">でもあることをしてから私の人生ごと変わりました。</span><br />
+                    鏡を見るのが嫌で、常に体型を隠す服ばかり着ていた私. 会話もなかった旦那が、<br />
+                    ある日、<span class="text-red-700 font-black underline decoration-[#5EA2D7] decoration-[6px] underline-offset-8">横を通り過ぎる時に二度見したんです。</span>
+                </p>
+
+                <div class="text-center py-20 px-8 relative">
+                    <div class="absolute inset-0 bg-[#5EA2D7]/10 rounded-[4rem] -rotate-1 shadow-lg border border-white"></div>
+                    <div class="relative text-center">
+                        <div class="text-blue-300 text-7xl font-serif absolute -top-12 left-0 opacity-40">“</div>
+                        <p class="text-3xl md:text-5xl font-black text-slate-950 font-sans tracking-tighter">「なんか…綺麗になった？」</p>
+                        <div class="text-blue-300 text-7xl font-serif absolute -bottom-16 right-0 opacity-40">”</div>
+                    </div>
+                </div>
+
+                <div class="mt-16 p-1.5 flex items-center bg-slate-900 rounded-[2rem] shadow-2xl overflow-hidden text-left text-center">
+                    <div class="bg-white/10 p-5 rounded-2xl mr-8 text-center text-center text-center">
+                        <i data-lucide="heart" class="w-8 h-8 text-red-400 fill-red-400"></i>
+                    </div>
+                    <p class="text-white text-lg font-bold font-sans text-left">
+                        「お母さん」では無く「一人の女性」として扱われる喜びを思い出しました。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Table of Contents -->
+    <section class="py-24 bg-[#fafafa]">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="bg-white p-12 md:p-16 rounded-[2.5rem] shadow-[0_10px_50px_-20px_rgba(0,0,0,0.1)] border border-slate-200 text-left">
+                <div class="flex items-center gap-4 mb-12 text-left">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 shadow-inner border border-blue-100">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-sm font-black tracking-[0.4em] text-slate-400 font-sans uppercase text-left">Content Index</h3>
+                </div>
+                
+                <nav class="space-y-1">
+                    <a href="#mechanism" class="group border-b border-slate-100 last:border-0 block">
+                        <div class="flex items-center justify-between py-6 group-hover:translate-x-3 transition-transform duration-500 text-left text-left text-left">
+                            <div class="flex items-center gap-8 text-left text-left text-left">
+                                <span class="text-blue-500 font-sans text-sm font-black italic tracking-tighter opacity-30 group-hover:opacity-100 text-left">01</span>
+                                <span class="text-slate-800 group-hover:text-blue-600 font-black text-xl font-sans text-left text-left">その施術内容とは</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-200 group-hover:text-blue-400"></i>
+                        </div>
+                    </a>
+                    <a href="#experience" class="group border-b border-slate-100 last:border-0 block">
+                        <div class="flex items-center justify-between py-6 group-hover:translate-x-3 transition-transform duration-500 text-left text-left text-left">
+                            <div class="flex items-center gap-8 text-left text-left text-left text-left">
+                                <span class="text-blue-500 font-sans text-sm font-black italic tracking-tighter opacity-30 group-hover:opacity-100 text-left text-left">02</span>
+                                <span class="text-slate-800 group-hover:text-blue-600 font-black text-xl font-sans text-left text-left text-left">受けてきた感想</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-200 group-hover:text-blue-400"></i>
+                        </div>
+                    </a>
+                    <a href="#pain" class="group border-b border-slate-100 last:border-0 block text-left">
+                        <div class="flex items-center justify-between py-6 group-hover:translate-x-3 transition-transform duration-500 text-left text-left text-left">
+                            <div class="flex items-center gap-8 text-left text-left text-left text-left text-left text-left text-left">
+                                <span class="text-blue-500 font-sans text-sm font-black italic tracking-tighter opacity-30 group-hover:opacity-100 text-left text-left text-left">03</span>
+                                <span class="text-slate-800 group-hover:text-blue-600 font-black text-xl font-sans text-left text-left text-left text-left">痛み・腫れ・経過</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-200 group-hover:text-blue-400 text-center"></i>
+                        </div>
+                    </a>
+                    <a href="#doctor" class="group border-b border-slate-100 last:border-0 block text-left">
+                        <div class="flex items-center justify-between py-6 group-hover:translate-x-3 transition-transform duration-500 text-left text-left text-left text-left">
+                            <div class="flex items-center gap-8 text-left text-left text-left text-left text-left text-left text-left">
+                                <span class="text-blue-500 font-sans text-sm font-black italic tracking-tighter opacity-30 group-hover:opacity-100 text-left text-left text-left text-left">04</span>
+                                <span class="text-slate-800 group-hover:text-blue-600 font-black text-xl font-sans text-left text-left text-left text-left text-left">私が受けたクリニック</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-200 group-hover:text-blue-400 text-center text-center"></i>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Mechanism -->
+    <section id="mechanism" class="py-32 bg-white scroll-mt-20">
+        <div class="max-w-2xl mx-auto px-6 text-left">
+            <header class="text-center mb-20 text-center">
+                <h2 class="text-3xl font-black text-slate-900 leading-tight font-sans text-center text-center">私の人生を変えた「スルリム」</h2>
+            </header>
+
+            <div class="space-y-12 text-lg text-slate-700 leading-[2.2] font-sans">
+                <p class="p-8 bg-blue-50/50 rounded-3xl italic border border-blue-200 text-slate-600 font-medium text-left">
+                    私も初めは怪しいと思っていたんですよ。でも、調べていくうちに腑に落ちたんです。
+                </p>
+
+                <div class="py-6">
+                    <p class="text-xs font-black text-blue-400 tracking-[0.3em] uppercase mb-3 text-left">Active Ingredient</p>
+                    <h3 class="text-2xl font-black text-slate-950 mb-6 flex flex-wrap gap-2 items-center text-left text-left">
+                        主成分は、<span class="text-white bg-[#5EA2D7] px-4 py-1 rounded-lg shadow-lg text-left text-left">「デオキシコール酸」</span>
+                    </h3>
+                    <p class="font-medium text-slate-800 text-left text-left text-left">
+                        この成分、実は<span class="font-black border-b-4 border-red-200 italic mx-1 text-slate-950">「脂肪を排出する」</span>働きを持ちます。一回で35%の脂肪細胞を排出してくれるんです！！
+                    </p>
+                </div>
+
+                <p class="text-3xl text-center font-black text-slate-900 py-16 px-6 bg-slate-50 border-y-4 border-double border-slate-200 rounded-3xl text-center text-center text-center text-center">
+                    「脂肪を排出する」
+                </p>
+
+                <div class="space-y-10 pt-10 text-center">
+                    <h4 class="text-2xl font-black text-center text-slate-950 underline decoration-yellow-300 decoration-8 underline-offset-[-2px] text-center text-center text-center text-center">なぜリバウンドしないのか？</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-slate-100 p-8 rounded-3xl border border-slate-200 shadow-inner text-left text-left text-left text-left">
+                            <p class="text-xs font-black text-slate-400 mb-6 uppercase tracking-widest font-sans text-left">Conventional</p>
+                            <p class="font-black mb-8 text-xl font-sans text-slate-900 text-left text-left text-left text-left">一般的なダイエット</p>
+                            <div class="flex items-center justify-around mb-8 h-24 text-center">
+                                <div class="flex flex-col items-center gap-1 text-center">
+                                    <div class="w-14 h-14 bg-slate-300 rounded-full flex items-center justify-center relative text-center">
+                                        <div class="w-10 h-10 bg-yellow-400 rounded-full shadow-inner animate-pulse text-center"></div>
+                                    </div>
+                                    <span class="text-[10px] font-black opacity-40 uppercase text-center text-center">Before</span>
+                                </div>
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-slate-300 text-center"></i>
+                                <div class="flex flex-col items-center gap-1 text-center">
+                                    <div class="w-14 h-14 bg-slate-300 rounded-full flex items-center justify-center relative text-center text-center">
+                                        <div class="w-4 h-4 bg-yellow-400 rounded-full shadow-inner text-center"></div>
+                                    </div>
+                                    <span class="text-[10px] font-black opacity-40 uppercase text-center text-center">After</span>
+                                </div>
+                            </div>
+                            <p class="text-base opacity-80 leading-relaxed font-medium font-sans text-left text-left text-left">
+                                脂肪細胞を<span class="font-black text-slate-900 underline decoration-slate-400">「小さく」</span>するだけ。細胞の数は変わらないから、食事を戻せばまた膨らんでリバウンドします。
+                            </p>
+                        </div>
+                        <div class="bg-blue-600 p-8 rounded-3xl shadow-2xl text-white relative overflow-hidden text-left text-left text-left text-left text-left">
+                            <div class="absolute -bottom-4 -right-4 opacity-10 text-center"><i data-lucide="zap" class="w-32 h-32 text-center text-center"></i></div>
+                            <p class="text-xs font-black text-blue-200 mb-6 uppercase tracking-widest relative z-10 font-sans text-left text-left text-left text-left">Slim Method</p>
+                            <p class="font-black mb-8 text-xl flex items-center gap-3 relative z-10 font-sans text-left text-left text-left text-left text-left">
+                                スルリム式 <i data-lucide="sparkles" class="w-6 h-6 text-yellow-300"></i>
+                            </p>
+                            <div class="flex items-center justify-around mb-8 h-24 relative z-10 text-center">
+                                <div class="flex flex-col items-center gap-1 text-center text-center">
+                                    <div class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center relative text-center text-center text-center">
+                                        <div class="w-10 h-10 bg-yellow-400 rounded-full shadow-inner text-center text-center"></div>
+                                    </div>
+                                    <span class="text-[10px] font-black opacity-60 uppercase text-center text-center text-center text-center">Before</span>
+                                </div>
+                                <i data-lucide="arrow-right" class="w-6 h-6 text-white text-center text-center text-center"></i>
+                                <div class="flex flex-col items-center gap-1 text-center text-center text-center">
+                                    <div class="w-14 h-14 border-2 border-white/20 rounded-full flex items-center justify-center relative overflow-visible text-center text-center text-center text-center text-center text-center">
+                                        <div class="absolute -right-4 -top-4 w-6 h-6 bg-yellow-300 rounded-full shadow-lg border-2 border-white animate-bounce text-center text-center"></div>
+                                    </div>
+                                    <span class="text-[10px] font-black opacity-60 uppercase text-center text-center text-center text-center text-center text-center text-center">After</span>
+                                </div>
+                            </div>
+                            <p class="text-base opacity-100 leading-relaxed font-bold relative z-10 font-sans text-left text-left text-left text-left">
+                                脂肪細胞そのものを<span class="font-black text-yellow-300 underline decoration-yellow-400/50 underline-offset-4">「体外へ排出」</span>して減らします。脂肪そのものを出すので、もう脂肪は溜まれません。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Experience & Price -->
+    <section id="experience" class="py-32 bg-[#fafafa] scroll-mt-20 text-center text-center text-center text-center text-center text-center text-center">
+        <div class="max-w-4xl mx-auto px-6 text-center text-center text-center text-center text-center text-center text-center">
+            <header class="mb-24 text-center text-center text-center text-center text-center">
+                <h2 class="text-3xl font-black text-slate-900 font-sans text-center text-center text-center text-center text-center">受けてきた感想</h2>
+            </header>
+            
+            <div class="mb-32 relative text-center text-center text-center text-center text-center text-center text-center">
+                <p class="text-xl md:text-2xl mb-12 text-slate-700 tracking-[0.2em] font-black font-sans text-center text-center text-center text-center text-center text-center text-center text-center">
+                    医療痩身とは思えない、<br class="md:hidden"> <span class="text-red-600 bg-red-50 px-2 text-center text-center text-center text-center text-center text-center text-center text-center">圧倒的な破壊的低価格</span>
+                </p>
+                
+                <div class="inline-block relative text-center text-center text-center text-center text-center text-center text-center text-center">
+                    <div class="absolute inset-0 bg-blue-500/30 blur-[80px] rounded-full scale-125 animate-pulse text-center text-center text-center text-center text-center text-center text-center"></div>
+                    <div class="relative bg-slate-950 text-white px-8 md:px-16 py-12 md:py-16 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_30px_80px_-15px_rgba(0,0,0,0.6)] overflow-hidden border border-white/20 text-center text-center text-center text-center text-center text-center text-center text-center">
+                        <i data-lucide="award" class="absolute -top-6 -left-6 p-6 opacity-10 w-48 h-48 text-[#5EA2D7] rotate-12 text-center text-center text-center text-center text-center text-center text-center text-center"></i>
+                        <div class="relative z-10 text-center text-center text-center text-center text-center text-center text-center text-center">
+                            <p class="text-[10px] md:text-xs tracking-[0.6em] font-sans mb-6 text-[#5EA2D7] font-black uppercase text-center text-center text-center text-center text-center text-center text-center text-center">Special First Trial</p>
+                            <div class="flex items-baseline justify-center gap-2 md:gap-3 mb-3 text-center text-center text-center text-center text-center text-center text-center text-center">
+                                <span class="text-6xl md:text-[9rem] font-sans font-black tracking-tighter leading-none price-gradient drop-shadow-[0_8px_8px_rgba(0,0,0,0.5)] text-center text-center text-center text-center text-center text-center text-center text-center">
+                                    9,800
+                                </span>
+                                <span class="text-3xl md:text-5xl font-black text-white leading-none text-center text-center text-center text-center text-center text-center text-center">円</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 mt-4 text-center text-center text-center text-center text-center text-center text-center text-center">
+                                <span class="inline-block bg-red-600 text-white text-[9px] md:text-[11px] font-black px-3 py-1 rounded-full tracking-widest animate-bounce text-center text-center text-center text-center text-center text-center text-center">
+                                    限定特別価格
+                                </span>
+                                <p class="text-[10px] md:text-xs text-white/40 font-bold mt-1 tracking-tighter text-center text-center text-center text-center text-center text-center text-center text-center text-center">※初回限定・1箇所注入分</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto space-y-16 text-slate-800 leading-[2.4] text-justify font-sans text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                <div class="p-10 bg-white rounded-[2rem] border-2 border-slate-200 shadow-sm relative italic font-bold text-slate-500 text-lg text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="absolute -top-4 -left-4 bg-slate-900 text-white p-3 rounded-2xl shadow-lg text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"><i data-lucide="help-circle" class="w-6 h-6 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></i></div>
+                    「安すぎて怪しい」「どうせカウンセリングで何十万の契約を迫られるんでしょ」。
+                </div>
+                
+                <p class="text-xl font-black text-center md:text-left text-left text-left text-left text-left text-left text-left text-left">はっきり言います。この「9,800円」を信じられた理由は、綺麗事ではありません。</p>
+
+                <div class="p-12 md:p-16 border-x-[12px] border-red-500/10 text-center bg-red-50 rounded-3xl shadow-sm text-center text-center text-center text-center text-center text-center text-center text-center">
+                    <p class="font-black text-red-900 text-2xl md:text-3xl leading-relaxed text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                        「一回で結果を見せて、客を黙らせる」<br />
+                        圧倒的な自信を感じたからです。
+                    </p>
+                </div>
+
+                <div class="bg-white p-12 rounded-[2.5rem] shadow-xl border-4 border-[#5EA2D7]/20 space-y-10 relative overflow-hidden text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#5EA2D7]/5 rounded-full -mr-16 -mt-16 text-center text-center text-center text-center text-center text-center text-center"></div>
+                    <p class="text-slate-900 leading-[2.6] text-xl font-bold italic relative z-10 text-left text-left text-left text-left text-left text-left text-left text-left">
+                        「<span class="text-slate-950 font-black not-italic underline decoration-[#5EA2D7] decoration-[8px] underline-offset-[10px] text-left text-left text-left text-left text-left text-left">うちは1回で変化を感じてもらえます。</span>変化を感じなかったら、いくら勧誘したって来ない。逆に『あ、これ効くわ』って思ってもらえたら、きっとまた思い出してくださる」
+                    </p>
+                    <p class="text-right text-slate-400 font-black tracking-widest text-xs uppercase text-right text-right text-right text-right text-right text-right text-right text-right">— JUNO Clinic Official —</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Pain & Downtime -->
+    <section id="pain" class="py-32 bg-white scroll-mt-20 text-center text-center text-center text-center text-center text-center">
+        <div class="max-w-4xl mx-auto px-6 text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+            <header class="mb-24 text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                <h2 class="text-3xl font-black text-slate-900 font-sans text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">Q&A / 痛みと経過について</h2>
+                <div class="w-20 h-1.5 bg-blue-100 mx-auto mt-6 rounded-full text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></div>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 font-sans text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                <div class="p-12 bg-white border-2 border-slate-100 rounded-[3rem] shadow-sm hover:shadow-xl transition-all duration-500 text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-10 text-[#5EA2D7] shadow-inner text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                        <i data-lucide="zap" class="w-8 h-8 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 mb-6 text-xl tracking-widest uppercase text-left text-left text-left text-left text-left text-left text-left text-left text-left">痛み</h4>
+                    <p class="text-slate-600 text-base leading-[2.4] font-medium text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">注入時はチクッとする程度。数日間は押すと筋肉痛のような鈍痛がありましたが、予防接種と同じくらいです。</p>
+                </div>
+                <div class="p-12 bg-white border-2 border-slate-100 rounded-[3rem] shadow-sm hover:shadow-xl transition-all duration-500 text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-10 text-[#5EA2D7] shadow-inner text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                        <i data-lucide="smile" class="w-8 h-8 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 mb-6 text-xl tracking-widest uppercase text-left text-left text-left text-left text-left text-left text-left text-left text-left">腫れ</h4>
+                    <p class="text-slate-600 text-base leading-[2.4] font-medium text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">注入直後は「ふっくり」していましたが、翌日にはスッキリひきました！</p>
+                </div>
+                <div class="p-12 bg-white border-2 border-slate-100 rounded-[3rem] shadow-sm hover:shadow-xl transition-all duration-500 text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-10 text-[#5EA2D7] shadow-inner text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                        <i data-lucide="clock" class="w-8 h-8 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 mb-6 text-xl tracking-widest uppercase text-left text-left text-left text-left text-left text-left text-left text-left text-left">経過</h4>
+                    <p class="text-slate-600 text-base leading-[2.4] font-medium text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">翌日からお仕事へ. メイクで隠せる程度の内出血で安心しました。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Doctor & Trust -->
+    <section id="doctor" class="py-32 bg-[#0a192f] text-white overflow-hidden relative scroll-mt-20 text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+        <div class="max-w-5xl mx-auto px-6 relative z-10 font-sans text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+            <header class="text-center mb-32 text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                <p class="text-blue-400 font-black tracking-[0.5em] mb-4 uppercase text-xs text-center text-center text-center text-center text-center text-center text-center text-center">Reliability</p>
+                <h2 class="text-3xl md:text-5xl font-black tracking-widest text-center text-center text-center text-center text-center text-center text-center text-center">私が <span class="text-[#5EA2D7] italic text-center text-center text-center text-center text-center text-center">JUNO</span> を選んだ理由</h2>
+            </header>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start mb-40 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                <div class="space-y-16 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <h3 class="text-3xl font-black border-l-8 border-[#5EA2D7] pl-8 leading-tight text-left text-left text-left text-left text-left text-left text-left text-left">痩せ・痩身に特化した<br>医師が在籍</h3>
+                    <div class="space-y-8 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                        <p class="text-5xl font-black text-left text-left text-left text-left text-left text-left text-left">河合 朋子</p>
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-lg space-y-6 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">
+                            <div>
+                                <p class="text-[#5EA2D7] text-xs font-black tracking-widest uppercase mb-3 text-left text-left text-left text-left text-left text-left text-left text-left">Biography / 経歴</p>
+                                <ul class="text-sm opacity-90 leading-relaxed font-bold space-y-2 text-left text-left text-left text-left text-left text-left text-left">
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left">・藤田医科大学 医学部 卒業</li>
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left text-left">・愛知県立循環器・呼吸器病センター 循環器内科</li>
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left text-left text-left">・藤田医科大学病院 循環器内科 / 助教</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-white/5 text-left text-left text-left text-left text-left text-left text-left text-left">
+                                <p class="text-[#5EA2D7] text-xs font-black tracking-widest uppercase mb-3 text-left text-left text-left text-left text-left text-left text-left text-left">Qualifications / 資格</p>
+                                <ul class="text-sm opacity-90 leading-relaxed font-bold space-y-2 text-left text-left text-left text-left text-left text-left text-left text-left">
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left">・医学博士</li>
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left text-left">・日本内科学会総合内科専門医・認定医</li>
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left text-left text-left text-left">・日本循環器学会循環器専門医</li>
+                                    <li class="flex items-start gap-2 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">・日本医師会認定産業医</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                    <div class="absolute inset-0 border-2 border-[#5EA2D7]/30 translate-x-8 translate-y-8 rounded-[3rem] group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-700 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></div>
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=800" 
+                         class="relative z-10 rounded-[3rem] shadow-2xl grayscale-[20%] text-center text-center text-center text-center text-center text-center text-center text-center" alt="河合医師">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Closing Message -->
+    <section class="py-48 bg-white font-sans text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+        <div class="max-w-3xl mx-auto px-6 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+            <h2 class="text-4xl font-black mb-24 text-slate-950 tracking-tighter leading-tight text-center text-center text-center text-center text-center text-center text-center text-center text-center">私と同じ思いを<br class="md:hidden">して欲しくない</h2>
+            <div class="space-y-16 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                <p class="text-2xl font-black text-slate-900 italic leading-relaxed text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                    「踏み出した人から、<br class="md:hidden text-center text-center"><span class="bg-yellow-100 px-2 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">景色は変わり始めます</span>」
+                </p>
+                <div class="w-16 h-1 bg-slate-200 mx-auto text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></div>
+                <p class="text-lg text-slate-500 font-bold tracking-[0.3em] uppercase font-sans text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">Transformation begins today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Share Section -->
+    <section class="py-24 bg-slate-950 text-white font-sans text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+        <div class="max-w-xl mx-auto px-6 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+            <div class="bg-white/5 p-12 rounded-[3rem] border border-white/10 shadow-2xl text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                <h3 class="text-xl font-black mb-6 flex items-center justify-center gap-3 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                    <i data-lucide="share-2" class="w-6 h-6 text-[#5EA2D7] text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></i>
+                    このページを他の人に送る
+                </h3>
+                <p class="text-sm text-slate-400 mb-10 leading-loose font-bold text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                    ボタンを押すと、このページのリンクがコピーされます。<br/>
+                    LINEやメールに貼り付けて送ることができます。
+                </p>
+                <button onclick="handleCopyLink()" id="copyBtn" class="w-full py-5 rounded-2xl bg-white text-slate-950 font-black flex items-center justify-center gap-4 hover:bg-[#5EA2D7] hover:text-white transition-all shadow-lg active:scale-95 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                    <i data-lucide="share-2" class="w-6 h-6 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"></i>
+                    ページURLをコピーする
+                </button>
+                <div id="copyStatus" class="mt-6 text-sm text-green-400 font-black hidden animate-bounce text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                    コピーが完了しました！そのまま貼り付けて送信してください。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA (コンパクト調整) -->
+    <section class="sticky bottom-0 bg-white/95 backdrop-blur-xl border-t border-slate-200 p-3 z-50 text-center">
+        <div class="max-w-xl mx-auto text-center text-center text-center text-center text-center text-center text-center">
+            <button class="w-full bg-[#5EA2D7] hover:bg-[#4d8fbf] text-white font-sans font-black py-4 rounded-xl shadow-[0_10px_30px_-5px_rgba(94,162,215,0.4)] transition-all transform active:scale-95 flex flex-col items-center justify-center gap-0.5 group text-center text-center text-center text-center text-center text-center text-center">
+                <span class="text-[9px] tracking-[0.4em] opacity-80 uppercase text-center text-center text-center text-center text-center text-center">Official Support</span>
+                <span class="flex items-center gap-3 text-base md:text-lg text-center text-center text-center text-center text-center text-center text-center">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-center text-center text-center text-center text-center text-center text-center"></i>
+                    LINEで無料カウンセリング
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <footer class="py-32 bg-[#fafafa] text-center text-[10px] text-slate-400 font-sans tracking-[0.5em] pb-56 uppercase text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+        <p class="font-black text-slate-300 text-center text-center text-center text-center text-center text-center text-center text-center text-center">© JUNO CLINIC Tokyo. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Lucideアイコンの初期化
+        lucide.createIcons();
+
+        // リンクコピー機能
+        function handleCopyLink() {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyBtn');
+                const status = document.getElementById('copyStatus');
+                btn.classList.add('bg-green-500', 'text-white');
+                btn.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-center text-center text-center text-center text-center text-center text-center"></i> リンクをコピーしました';
+                status.classList.remove('hidden');
+                lucide.createIcons(); 
+                
+                setTimeout(() => {
+                    btn.classList.remove('bg-green-500', 'text-white');
+                    btn.innerHTML = '<i data-lucide="share-2" class="w-6 h-6 text-center text-center text-center text-center text-center text-center text-center"></i> ページURLをコピーする';
+                    status.classList.add('hidden');
+                    lucide.createIcons();
+                }, 3000);
+            } catch (err) {
+                console.error('Unable to copy', err);
+            }
+            document.body.removeChild(tempInput);
+        }
+    </script>
+</body>
+</html>
